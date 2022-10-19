@@ -27,6 +27,10 @@ const routes: Routes = [
       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
     canLoad: [AuthGuard], // Secure all child pages
   },
+  {
+    path: 'people',
+    loadChildren: () => import('./pages/people/people.module').then( m => m.PeoplePageModule)
+  },
 ];
 @NgModule({
   imports: [

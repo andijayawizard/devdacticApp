@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
+  myVar: string = 'jangan di klik dong!';
   constructor(
     private authService: AuthenticationService,
     private router: Router
@@ -15,5 +16,8 @@ export class Tab1Page {
   async logout() {
     await this.authService.logout();
     this.router.navigateByUrl('/', { replaceUrl: true });
+  }
+  updateValue() {
+    this.myVar = `dibilang jangan di klik!`;
   }
 }
