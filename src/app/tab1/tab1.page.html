@@ -1,11 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button expand="full" (click)="logout()">Logout</ion-button>
-  <ion-button expand="full" (click)="updateValue()">click here!</ion-button>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button full block>Team</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button block default>Blog</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button favorite outline clear large>Karir</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-10>This column will take 10% of space</ion-col>
+      <ion-col width-12>grid2</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    grid1
+  </ion-grid>
+  <ion-grid>
+    grid2
+  </ion-grid>
+  <ion-card>
+    <ion-card-header>
+      kepala
+    </ion-card-header>
+    <ion-card-content>
+      isinya
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="primary" expand="full" (click)="openDetails()">open details</ion-button>
+  <ion-button color="secondary" expand="full" (click)="updateValue()">click here!</ion-button>
+  <ion-button color="danger" expand="full" (click)="logout()">Logout</ion-button>
   {{myVar}}
 </ion-content>

@@ -14,9 +14,21 @@ const routes: Routes = [
       },
       {
         path: 'tab2',
-        loadChildren: () =>
-          import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
+          },
+        ],
       },
+      // {
+      //   path: '/people/:id',
+      //   loadChildren: () =>
+      //     import('../pages/people-detail/people-detail.module').then(
+      //       (m) => m.PeopleDetailPageModule
+      //     ),
+      // },
       {
         path: 'tab3',
         loadChildren: () =>

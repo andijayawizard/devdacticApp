@@ -29,7 +29,17 @@ const routes: Routes = [
   },
   {
     path: 'people',
-    loadChildren: () => import('./pages/people/people.module').then( m => m.PeoplePageModule)
+    loadChildren: () =>
+      import('./pages/people/people.module').then((m) => m.PeoplePageModule),
+    canLoad: [AuthGuard],
+  },
+  {
+    path: 'people/:id',
+    loadChildren: () =>
+      import('./pages/people-detail/people-detail.module').then(
+        (m) => m.PeopleDetailPageModule
+      ),
+    canLoad: [AuthGuard],
   },
 ];
 @NgModule({

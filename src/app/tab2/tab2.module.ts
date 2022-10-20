@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { PeoplePageModule } from '../pages/people/people.module';
+import { PeopleDetailPageModule } from '../pages/people-detail/people-detail.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { PeoplePageModule } from '../pages/people/people.module';
     ExploreContainerComponentModule,
     Tab2PageRoutingModule,
     PeoplePageModule,
+    PeopleDetailPageModule,
   ],
   declarations: [Tab2Page],
 })

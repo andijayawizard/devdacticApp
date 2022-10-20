@@ -20,4 +20,7 @@ export class Tab1Page {
   updateValue() {
     this.myVar = `dibilang jangan di klik!`;
   }
+  openDetails() {
+    this.router.navigateByUrl('/people/100');
+  }
 }
