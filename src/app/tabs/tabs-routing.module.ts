@@ -35,6 +35,13 @@ const routes: Routes = [
           import('../tab3/tab3.module').then((m) => m.Tab3PageModule),
       },
       {
+        path: 'tab3/product/:id',
+        loadChildren: () =>
+          import('../pages/product-detail/product-detail.module').then(
+            (m) => m.ProductDetailPageModule
+          ),
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full',

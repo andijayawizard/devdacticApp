@@ -27,21 +27,24 @@ export class PeoplePage implements OnInit {
       spinner: 'bubbles',
     });
     await loading.present();
-    this.peopleService.getAll().subscribe(
-      (res) => {
-        if (res) {
-          loading.dismiss();
-          this.li = res;
-          this.list = this.li.records;
-          // this.image = `${this.apiUrl}/assets/uploads/images/people/${this.li.records.acak}-1.jpg`;
-          console.log(res);
-        } else {
-          this.loadCtrl.dismiss();
+    this.peopleService
+      .getAll()
+      .pipe()
+      .subscribe(
+        (res) => {
+          if (res) {
+            loading.dismiss();
+            this.li = res;
+            this.list = this.li.records;
+            // this.image = `${this.apiUrl}/assets/uploads/images/people/${this.li.records.acak}-1.jpg`;
+            console.log(res);
+          } else {
+            this.loadCtrl.dismiss();
+          }
+        },
+        (err) => {
+          console.log(err);
         }
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+      );
   }
 }

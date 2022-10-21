@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{details.nama}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="" />
+    <ion-card-content>
+      <ion-card-title>
+        {{details.nama|titlecase}}
+      </ion-card-title>
+      <p [innerHtml]="getHtml(details.ktrg)"></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

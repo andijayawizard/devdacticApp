@@ -41,6 +41,18 @@ const routes: Routes = [
       ),
     canLoad: [AuthGuard],
   },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('./pages/product/product.module').then((m) => m.ProductPageModule),
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () =>
+      import('./pages/product-detail/product-detail.module').then(
+        (m) => m.ProductDetailPageModule
+      ),
+  },
 ];
 @NgModule({
   imports: [
