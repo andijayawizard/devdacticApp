@@ -14,9 +14,8 @@
       <ion-card-title>
         {{details.nama}}
       </ion-card-title>
-      <p>
-        {{details.ktrg}}
-      </p>
+      <p [innerHtml]="getHtml(details.ktrg)"></p>
+      <!-- <p [innerText]="getHtml(details.ktrg)"></p> -->
     </ion-card-content>
   </ion-card>
 </ion-content>
