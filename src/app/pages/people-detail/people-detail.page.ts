@@ -22,14 +22,21 @@ export class PeopleDetailPage implements OnInit {
   }
   index() {
     const id: number = +this.route.snapshot.paramMap.get('id');
-    this.peopleService.getDetail(id).subscribe(
-      (res) => {
-        this.details = res;
-        this.image = `${this.apiUrl}/assets/uploads/images/people/${this.details.acak}-1.jpg`;
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    this.peopleService
+      .getDetail(id)
+      .pipe()
+      .subscribe(
+        (res) => {
+          this.details = res;
+          this.image = `${this.apiUrl}/assets/uploads/images/people/${this.details.acak}-1.jpg`;
+          console.log('http response: ', res);
+        },
+        (err) => {
+          console.log('http error: ', err);
+        },
+        () => {
+          console.log('http request completed');
+        }
+      );
   }
 }

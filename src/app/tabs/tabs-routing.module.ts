@@ -22,13 +22,13 @@ const routes: Routes = [
           },
         ],
       },
-      // {
-      //   path: '/people/:id',
-      //   loadChildren: () =>
-      //     import('../pages/people-detail/people-detail.module').then(
-      //       (m) => m.PeopleDetailPageModule
-      //     ),
-      // },
+      {
+        path: 'tab2/people/:id',
+        loadChildren: () =>
+          import('../pages/people-detail/people-detail.module').then(
+            (m) => m.PeopleDetailPageModule
+          ),
+      },
       {
         path: 'tab3',
         loadChildren: () =>
