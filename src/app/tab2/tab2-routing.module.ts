@@ -8,10 +8,6 @@ const routes: Routes = [
   {
     path: '',
     component: PeoplePage,
-    // children: [
-    //   { path: '/people', component: PeoplePage },
-    //   { path: '/people/:id', component: PeopleDetailPage },
-    // ],
   },
 ];
 

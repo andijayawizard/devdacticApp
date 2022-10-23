@@ -8,7 +8,10 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button full block>Team</ion-button>
+        <ion-button full block [routerLink]="['/tabs/tab2']" routerLinkActive="router-link-active" >Team</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button full block [routerLink]="['/tabs/tab3']" routerLinkActive="router-link-active">Service</ion-button>
       </ion-col>
       <ion-col>
         <ion-button block default>Blog</ion-button>

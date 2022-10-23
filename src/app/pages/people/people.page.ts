@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./people.page.scss'],
 })
 export class PeoplePage implements OnInit {
+  title = 'Tim Kami';
   apiUrl: string = environment.apiUrl;
   li: any;
   list: any[];

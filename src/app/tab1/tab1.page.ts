@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  myVar: string = 'jangan di klik dong!';
+  myVar = 'jangan di klik dong!';
   constructor(
     private authService: AuthenticationService,
     private router: Router

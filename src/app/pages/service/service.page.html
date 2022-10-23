@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list *ngIf="list">
+  <ion-item *ngFor="let item of list" [routerLink]="['/tabs/tab3/service/', item.id]"
+  routerLinkActive="router-link-active">
+    <ion-avatar item-left>
+      <img src="{{apiUrl}}/assets/uploads/images/services/{{item.acak}}-1.jpg">
+    </ion-avatar>
+    <p>{{item.nama|titlecase}}</p>
+  </ion-item>
+</ion-list>
+</ion-content>
