@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list *ngIf="list">
-    <ion-item *ngFor="let item of list" routerLink="/tabs/tab3/product/{{item.id}}" routerLinkActive="router-link-active" >
+    <ion-item *ngFor="let item of list" [routerLink]="['/tabs/tab3/product/',item.id]" routerLinkActive="router-link-active" >
       <!-- <ion-avatar item-left>
         <img src="">
       </ion-avatar> -->
